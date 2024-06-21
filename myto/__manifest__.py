@@ -23,8 +23,8 @@
     'auto_install': False,
     'aplication': False,
     'images': [
-       '',
-      '',
+       'static/description/cover.png',
+       'static/description/icon.png',
     ],
     'price': 0,
     'curency': 'EUR',
