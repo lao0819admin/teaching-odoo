@@ -1,1 +1,1 @@
-# teaching-odoo
+# teaching-odoo start 2 learning
