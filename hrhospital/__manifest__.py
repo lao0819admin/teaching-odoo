@@ -1,8 +1,8 @@
 {
-    'name': 'My test module',
-    'summary': 'UA TEST GUN MY AR',
+    'name': ' HOSPITAL ACCOUNTING',
+    'summary': 'HOSPITAL RECORD OF PATIENT VISITS',
 
-    'author': 'xtos tam ua',
+    'author': 'LYAKH A.O.',
     'website': 'https://des-tam.ua',
 
     'category': 'Customizations',
@@ -16,7 +16,7 @@
     'external_dependencies': {'python': [], },
     'data': [
         'security/ir.model.access.csv',
-        'views/my_to_views.xml',
+        'views/hr_hospital.xml',
     ],
     'demo': [
         'demo/my_demo.xml'
@@ -26,8 +26,8 @@
     'auto_install': False,
     'aplication': False,
     'images': [
-       'static/description/cover.png',
-       'static/description/icon.png',
+       # 'static/description/cover.png',
+       # 'static/description/icon.png',
     ],
     'price': 0,
     'curency': 'EUR',

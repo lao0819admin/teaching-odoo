@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+myto.access_my_to,access_my_to,myto.model_my_to,base.group_user,1,1,1,1

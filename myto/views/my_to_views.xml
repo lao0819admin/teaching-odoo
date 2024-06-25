@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="my_to_tree" model="ir.ui.view">
+        <field name="name">my.to.tree ()</field>
+        <field name="model">my.to</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="my_to_form" model="ir.ui.view">
+        <field name="name">my.to.form ()</field>
+        <field name="model">my.to</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="date"/>
+                        <field name="yesterday"/>
+                        <field name="qty"/>
+                        <field name="partner_id"/>
+                        <field name="image" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="my_to_act_window" model="ir.actions.act_window">
+        <field name="name">My To</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">my.to</field>
+        <field name="view_mode">tree,form</field>
+     </record>
+
+    <menuitem id="my_to_menu"
+        name="My To"
+        sequence="200"/>
+     <menuitem id="my_to_menu_one"
+        action="my_to_act_window"
+        parent="my_to_menu"
+        name="My To One"
+        sequence="200"/>
+</odoo>
