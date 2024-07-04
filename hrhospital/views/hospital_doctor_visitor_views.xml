@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hospital_doctor_visitor_tree" model="ir.ui.view">
+      <field name="name">hospital.doctor.visitor.tree ()</field>
+      <field name="model">hospital.doctor.visitor</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="doctor_id"/>
+          <field name="patient_id"/>
+          <field name="visit_date_reception"/>
+          <field name="visit_date_planed"/>
+          <field name="diagnosis_id"/>
+          <field name="research_id"/>
+          <field name="visit_state"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="hospital_doctor_visitor_form" model="ir.ui.view">
+        <field name="name">hospital.doctor.visitor.form ()</field>
+        <field name="model">hospital.doctor.visitor</field>
+        <field name="arch" type="xml">
+            <form>
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="doctor_id"/>
+                        <field name="patient_id"/>
+                        <field name="visit_date_planed"/>
+                        <field name="visit_date_reception"/>
+                        <field name="diagnosis_id"/>
+                        <field name="research_id"/>
+                        <field name="visit_state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_doctor_visitor_act_window" model="ir.actions.act_window">
+        <field name="name">Doctor visitor</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.doctor.visitor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hospital_doctor_visitor_menu"
+              action="hospital_doctor_visitor_act_window"
+              parent="hospital_menu"
+              name="Doctor visitor"
+              sequence="200"/>
+
+</odoo>

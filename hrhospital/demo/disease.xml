@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- "хвороби перша демо" -->
+    <record id="disease1" model="hospital.disease">
+        <field name="name">Діабет 1 типу</field>
+    </record>
+
+    <record id="disease2" model="hospital.disease">
+        <field name="name">Діабет 2 типу</field>
+    </record>
+
+    <!--
+    <record id="disease_aspect_1" model="hospital.disease.aspect">
+        <field name="name">Аутоімунна система</field>
+        <field name="category_id" ref="disease1"/>
+        <field name="category_id" ref="disease2"/>
+    </record>
+    -->
+
+    <!--
+    <record id="disease_aspect_2" model="hospital.disease">
+        <field name="name">Аутоімунна система</field>
+        <field name="category_id" ref="disease2"/>
+    </record>
+    -->
+
+    <!-- "хвороби друга демо" -->
+    <!-- "
+    <record id="disease3" model="hospital.disease">
+        <field name="name">Безсоння</field>
+    </record>
+
+    <record id="disease4" model="hospital.disease">
+        <field name="name">Запаморочення</field>
+    </record>
+
+    <record id="disease_aspect_3" model="hospital.disease.aspect">
+        <field name="name">Нервова система</field>
+        <field name="category_id" ref="disease3"/>
+    </record>
+
+    <record id="disease_aspect_4" model="hospital.disease.aspect">
+        <field name="name">Нервова система</field>
+        <field name="category_id" ref="disease4"/>
+    </record>
+    -->
+
+</odoo>

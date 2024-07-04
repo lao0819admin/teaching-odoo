@@ -1,8 +1,8 @@
 {
-    'name': ' HOSPITAL ACCOUNTING',
+    'name': 'HOSPITAL ACCOUNTING',
     'summary': 'HOSPITAL RECORD OF PATIENT VISITS',
 
-    'author': 'LYAKH A.O.',
+    'author': 'Lyackh A.O.',
     'website': 'https://des-tam.ua',
 
     'category': 'Customizations',
@@ -11,23 +11,38 @@
 
     'depends': [
         'base',
-        ],
+    ],
 
     'external_dependencies': {'python': [], },
     'data': [
         'security/ir.model.access.csv',
-        'views/hr_hospital.xml',
+        'views/hospital_menu_views.xml',
+        'views/hospital_patient_views.xml',
+        'views/hospital_contact_person_views.xml',
+        'views/hospital_doctor_views.xml',
+        'views/hospital_doctor_visitor_views.xml',
+        'views/hospital_diagnosis_views.xml',
+        'views/hospital_disease_views.xml',
+        'views/hospital_disease_aspect_views.xml',
+        'views/hospital_personal_doctor_history_views.xml',
+        'views/hospital_research_aspect_views.xml',
+        'views/hospital_research_views.xml',
+        'views/hospital_schedule_views.xml',
+        'wizard/set_personal_doctor_wizard_views.xml',
     ],
     'demo': [
-        'demo/my_demo.xml'
+        'demo/disease.xml',
+        'demo/doctor.xml',
+        'demo/patient.xml',
+        'demo/contact.xml',
     ],
 
     'installable': True,
     'auto_install': False,
     'aplication': False,
     'images': [
-       # 'static/description/cover.png',
-       # 'static/description/icon.png',
+        'static/description/cover.png',
+        'static/description/icon.png',
     ],
     'price': 0,
     'curency': 'EUR',

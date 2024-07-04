@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hospital_schedule_tree" model="ir.ui.view">
+      <field name="name">hospital.schedule.tree ()</field>
+      <field name="model">hospital.schedule</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="doctor_id"/>
+          <field name="date_from"/>
+          <field name="date_to"/>
+          <field name="finished"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="hospital_schedule_form" model="ir.ui.view">
+        <field name="name">hospital.schedule.form ()</field>
+        <field name="model">hospital.schedule</field>
+        <field name="arch" type="xml">
+            <form>
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="doctor_id"/>
+                        <field name="date_from" readonly = "[('finished', '!=', False)]"/>
+                        <field name="date_to" readonly = "[('finished', '!=', False)]"/>
+                        <field name="finished"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hospital_schedule_act_window" model="ir.actions.act_window">
+        <field name="name">Schedule</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.schedule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hospital_schedule_menu"
+              action="hospital_schedule_act_window"
+              parent="hospital_menu"
+              name="Schedule"
+              sequence="200"/>
+
+</odoo>

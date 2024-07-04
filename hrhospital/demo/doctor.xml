@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="doctor1" model="hospital.doctor">
+        <field name="name">Олена</field>
+        <field name="last_name">Олександрівна</field>
+        <field name="gender">female</field>
+        <field name="specialty">Ендокринолог</field>
+    </record>
+
+    <record id="doctor2" model="hospital.doctor">
+        <field name="name">Андрій</field>
+        <field name="last_name">Олексійович</field>
+        <field name="gender">male</field>
+        <field name="specialty">Терапевт</field>
+    </record>
+
+    <record id="doctor3" model="hospital.doctor">
+        <field name="name">Василь</field>
+        <field name="last_name">Петрович</field>
+        <field name="gender">male</field>
+        <field name="specialty">Хірург</field>
+    </record>
+
+    <record id="doctor4" model="hospital.doctor">
+        <field name="name">Тарас</field>
+        <field name="last_name">Андрійович</field>
+        <field name="gender">male</field>
+        <field name="specialty">ЛОР</field>
+    </record>
+
+</odoo>

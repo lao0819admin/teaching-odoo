@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
-    <record id="hr_hospital_1" model="hr.hospital">
-        <field name="name">Demo data hrhospital</field>
-        <field name="date_visit" eval="DateTime.today().strftime('%Y-%m-%d')"/>
-        <field name="types_diseases"> </field>
-        <field name="patient_name"> </field>
-    </record>
-</odoo>
