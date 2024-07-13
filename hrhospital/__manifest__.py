@@ -29,12 +29,16 @@
         'views/hospital_research_views.xml',
         'views/hospital_schedule_views.xml',
         'wizard/set_personal_doctor_wizard_views.xml',
+        'wizard/get_report_diagnosis_wizard_views.xml',
     ],
     'demo': [
-        'demo/disease.xml',
         'demo/doctor.xml',
-        'demo/patient.xml',
         'demo/contact.xml',
+        'demo/patient.xml',
+        'demo/disease_parent.xml',
+        'demo/disease.xml',
+        'demo/diagnosis.xml',
+        'demo/doctor_visit.xml',
     ],
 
     'installable': True,

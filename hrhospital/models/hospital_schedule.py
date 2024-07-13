@@ -6,14 +6,21 @@ class HospitalSchedule(models.Model):
     _description = 'Schedule'
 
     name = fields.Char()
+
     doctor_id = fields.Many2one(
-        comodel_name='hospital.doctor', )
+        comodel_name='hospital.doctor',)
+
+    patient_id = fields.Many2one(
+        comodel_name ='hospital.patient', )
+
     date_from = fields.Datetime(
-        string='Date from', )
+        string ='Date from',)
+
     date_to = fields.Datetime(
-        string='Date to', )
+        string ='Date to',)
+
     finished = fields.Boolean(
-        string='finished', )
+        string ='finished',)
 
     @api.constrains('date_from', 'date_to')
     def _check_correct_date(self):

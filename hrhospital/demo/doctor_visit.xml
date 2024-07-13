@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hp_visits1" model="hospital.doctor.visitor">
+        <field name="patient_id" ref="patient1"/>
+        <field name="doctor_id" ref="doctor1"/>
+        <field name="visit_date_planed" eval="(datetime.now() + timedelta(days=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="visit_date_reception" eval="(datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="hp_visits2" model="hospital.doctor.visitor">
+        <field name="patient_id" ref="patient2"/>
+        <field name="doctor_id" ref="doctor2"/>
+        <field name="visit_date_planed" eval="(datetime.now() + timedelta(days=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="visit_date_reception" eval="(datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="hp_visits3" model="hospital.doctor.visitor">
+        <field name="patient_id" ref="patient3"/>
+        <field name="doctor_id" ref="doctor3"/>
+        <field name="visit_date_planed" eval="(datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="visit_date_reception" eval="(datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="hp_visits4" model="hospital.doctor.visitor">
+        <field name="patient_id" ref="patient4"/>
+        <field name="doctor_id" ref="doctor4"/>
+        <field name="visit_date_planed" eval="(datetime.now() + timedelta(days=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="visit_date_reception" eval="(datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+</odoo>

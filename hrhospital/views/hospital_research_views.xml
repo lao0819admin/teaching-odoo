@@ -10,8 +10,6 @@
           <field name="category_id"/>
           <field name="patient_id"/>
           <field name="doctor_id"/>
-<!-- <field name="sample_id"/> -->
-<!-- <field name="conclusion"/> -->
         </tree>
       </field>
     </record>
@@ -28,8 +26,6 @@
                         <field name="category_id"/>
                         <field name="patient_id"/>
                         <field name="doctor_id"/>
-<!-- <field name="sample_id"/>  -->
-<!-- <field name="conclusion"/> -->
                     </group>
                 </sheet>
             </form>

@@ -6,7 +6,11 @@
 
   <menuitem id="hospital_menu"
             parent="hospital_general_menu"
-            name="Hospital" sequence="100"/>
+            name="Hospital record" sequence="200"/>
+
+  <menuitem id="report_menu"
+            parent="hospital_general_menu"
+            name="Report get" sequence="400"/>
 
   <!-- <menuitem id="hospital_main_menu"
             parent="hospital_main_menu"

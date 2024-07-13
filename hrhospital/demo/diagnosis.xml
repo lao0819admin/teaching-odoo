@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Щось пішло не так -->
+    <record id="diagnosis1" model="hospital.diagnosis">
+        <field name="name">Встановлений за результатами аналізів</field>
+        <field name="patient_id" ref="patient1"/>
+        <field name="doctor_id" ref="doctor1"/>
+        <field name= "disease_id" ref="disease1"/>
+        <field name="date" eval="(datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="diagnosis2" model="hospital.diagnosis">
+        <field name="name">Встановлений за результатами обстеження</field>
+        <field name="patient_id" ref="patient2"/>
+        <field name="doctor_id" ref="doctor2"/>
+        <field name="disease_id" ref="disease5"/>
+        <field name="date" eval="(datetime.now() + timedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="diagnosis3" model="hospital.diagnosis">
+        <field name="name">Встановлений за результатами візиту</field>
+        <field name="patient_id" ref="patient3"/>
+        <field name="doctor_id" ref="doctor3"/>
+        <field name="disease_id" ref="disease6"/>
+        <field name="date"  eval="(datetime.now() + timedelta(days=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+     <record id="d4" model="hospital.diagnosis">
+        <field name="name">Встановлений за результатами комплексного обстеження</field>
+        <field name="patient_id" ref="patient4"/>
+        <field name="doctor_id" ref="doctor4"/>
+        <field name="disease_id" ref="disease8"/>
+        <field name="date" eval="(datetime.now() + timedelta(days=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+
+</odoo>

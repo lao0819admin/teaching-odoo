@@ -4,21 +4,25 @@
     <record id="contact1" model="hospital.contact.person">
         <field name="name">Валентина</field>
         <field name="last_name">Вікторівна</field>
+        <field name="phone">380638887766</field>
     </record>
 
     <record id="contact2" model="hospital.contact.person">
         <field name="name">Галина</field>
         <field name="last_name">Віталіївна</field>
+        <field name="phone">380638887755</field>
     </record>
 
     <record id="contact3" model="hospital.contact.person">
         <field name="name">Федір</field>
         <field name="last_name">Данилович</field>
+        <field name="phone">380638887744</field>
     </record>
 
-     <record id="contact4" model="hospital.contact.person">
+    <record id="contact4" model="hospital.contact.person">
         <field name="name">Святослав</field>
         <field name="last_name">Іванович</field>
+        <field name="phone">380638887733</field>
     </record>
 
 </odoo>

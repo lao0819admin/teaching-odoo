@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+   <!-- "хвороби друга демо" -->
+    <record id="disease_aspect1" model="hospital.disease.aspect">
+        <field name="name">Аутоімунна система</field>
+    </record>
+
+    <record id="disease_aspect2" model="hospital.disease">
+        <field name="name">Хіругія</field>
+    </record>
+
+    <record id="disease_aspect3" model="hospital.disease.aspect">
+        <field name="name">Терапевтія</field>
+    </record>
+
+    <record id="disease_aspect4" model="hospital.disease.aspect">
+        <field name="name">Нервова система</field>
+    </record>
+
+</odoo>

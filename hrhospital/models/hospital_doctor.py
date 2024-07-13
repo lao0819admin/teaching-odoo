@@ -11,20 +11,22 @@ class HospitalDoctor(models.Model):
         default=True,)
 
     specialty = fields.Char(
-        required=True,)
+        required=True)
 
     is_intern = fields.Boolean(
-        default=False,)
+        default=False)
 
     mentor_id = fields.Many2one(
         comodel_name='hospital.doctor',
-        domain="[('is_intern','=',False)]",)
+        domain="[('is_intern','=', False)]",
+        string='mentor_id',
+        change_default=True,
+        readonly=True if not is_intern else False)
 
-    @api.onchange('mentor_id, is_intern')
+    @api.onchange('is_intern', 'mentor_id')
     def compute_intern(self):
-        for obj in self:
-            if obj.is_intern:
-                obj.mentor_id.__setattr__(self, 'readonly', False)
-                obj.is_intern = obj.mentor_id
-            else:
-                obj.mentor_id.__setattr__(self.mentor_id, 'readonly', True)
+        if not self.is_intern:
+            self.mentor_id = True
+    # def compute_mentor(self):
+    #    if not self.is_intern and self.mentor_id:
+

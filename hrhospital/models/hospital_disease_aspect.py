@@ -11,17 +11,22 @@ class HospitalDiseaseAspect(models.Model):
     _order = 'complete_name'
 
     name = fields.Char(index=True, required=True)
+
     complete_name = fields.Char(compute='_compute_complete_name',
                                 recursive=True,
                                 store=True)
+
     parent_id = fields.Many2one(comodel_name='hospital.disease.aspect',
                                 string='Parent Disease',
                                 index=True,
                                 ondelete='cascade')
+
     parent_path = fields.Char(index=True)
+
     child_id = fields.One2many(comodel_name='hospital.disease.aspect',
                                inverse_name='parent_id',
                                string='Child Categories')
+
     disease_count = fields.Integer(
         '# Disease', compute='_compute_disease_aspect_count',
         help="Disease")

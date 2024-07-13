@@ -4,16 +4,16 @@ class SetPersonalDoctor(models.TransientModel):
     _name = 'set.personal.doctor.wizard'
 
     doctor_id = fields.Many2one(
-        comodel_name='hospital.doctor', string='New value of personal doctor',)
+        comodel_name='hospital.doctor',
+        string='New value of personal doctor',)
 
-    # action_create
     def action_set_doctor(self):
+        act_list = self._context.get('active_ids',[])
         patients = self.env['hospital.patient'].search([])
-        # print(self.doctor_id.id)
-        for patient in patients:
+        for act_p in act_list:
+            patient = patients[act_p-1]
             patient.write(
-                {'personal_doctor_id': self.doctor_id.id})
-        return True
+                            {'personal_doctor_id': self.doctor_id.id})
 
     def action_open_wizard(self):
         self.read()
